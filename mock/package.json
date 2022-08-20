@@ -1,0 +1,13 @@
+{
+  "name": "mock",
+  "version": "1.0.0",
+  "description": "newsapi mock",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "mock": "json-server --watch --port=5999 db.json"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
