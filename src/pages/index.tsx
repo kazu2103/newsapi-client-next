@@ -1,7 +1,10 @@
 import type { NextPage } from 'next'
+import Dashboard from '../components/table/Dashboard';
 
-const Home: NextPage = () => {
-  return <></>
-};
+const Home: NextPage = () => (
+  <>
+    <Dashboard></Dashboard>
+  </>
+);
 
 export default Home;

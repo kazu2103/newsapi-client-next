@@ -14,6 +14,8 @@ export class ListArticlesInteractor implements ListArticlesUseCase {
 
   async listArticles(data: ListArticlesInputData): Promise<ListArticlesOutputData> {
     const request = data as EverythingRequest;
+    console.log(request)
+    console.log(this.repository.everything)
     const result = await this.repository.everything(request);
     return result;
   }

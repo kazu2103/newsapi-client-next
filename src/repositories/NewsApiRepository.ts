@@ -1,7 +1,7 @@
-import { Axios } from "axios";
 import { EverythingRequest, EverythingResponse } from "../interfaces/api/Everything";
 import { INewsApiRepository } from "./INewsApiRepository";
 
+const axios = require('axios').default;
 export class NewsApiRepository implements INewsApiRepository{
   // シングルトンインスタンスを入れておく箱
   private static _repository: NewsApiRepository;
@@ -17,14 +17,14 @@ export class NewsApiRepository implements INewsApiRepository{
   }
   
   everything = async (request: EverythingRequest): Promise<EverythingResponse> => {
-    const axios = new Axios();
-    return axios.get(this.URL)
-      .then((res) => {
+    const result = axios.get(this.URL)
+      .then((res: any) => {
         return res.data as EverythingResponse;
       })
-      .catch((err) => {
+      .catch((err: any) => {
         throw Error(err);
       });
-      
-    }
+    console.log(result);
+    return result;
+  }
 }
