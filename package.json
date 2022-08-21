@@ -14,9 +14,12 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
     "axios": "^0.27.2",
+    "d3-shape": "^3.1.0",
+    "hoist-non-react-statics": "^3.3.2",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "recharts": "^2.1.13",
     "shallow-equal-object": "^1.1.1"
   },
   "devDependencies": {
